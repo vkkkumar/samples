@@ -18,8 +18,7 @@ var seleniumHelpers = require('webrtc-utilities').seleniumLib;
 function resolutionTest(t, resolutionButtonId, expectedWidth) {
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/getusermedia/resolution/index.html')
   .then(function() {
     t.pass('page loaded');

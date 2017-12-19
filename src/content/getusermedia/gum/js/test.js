@@ -19,8 +19,7 @@ test('Video width and video height are set on GUM sample', function(t) {
   // FIXME: use env[SELENIUM_BROWSER] instead?
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/getusermedia/gum/index.html')
   .then(function() {
     t.pass('Page loaded');
@@ -78,8 +77,7 @@ test('Check that errorMsg can add msg to the page', function(t) {
   // FIXME: use env[SELENIUM_BROWSER] instead?
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/getusermedia/gum/index.html')
   .then(function() {
     t.pass('Page loaded');

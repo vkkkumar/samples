@@ -20,8 +20,7 @@ function sendData(t) {
   var driver = seleniumHelpers.buildDriver();
   var sendButton;
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/datachannel/datatransfer/index.html')
   .then(function() {
     t.pass('page loaded');

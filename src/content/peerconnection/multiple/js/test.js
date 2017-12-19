@@ -18,8 +18,7 @@ var seleniumHelpers = require('webrtc-utilities').seleniumLib;
 test('PeerConnection multiple sample', function(t) {
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/peerconnection/multiple/index.html')
   .then(function() {
     t.pass('page loaded');

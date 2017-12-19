@@ -41,8 +41,7 @@ test('PeerConnection restart ICE sample', {skip: true}, function(t) {
   var driver = seleniumHelpers.buildDriver();
 
   var firstStats = null;
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/peerconnection/restart-ice/index.html')
   .then(function() {
     t.pass('page loaded');

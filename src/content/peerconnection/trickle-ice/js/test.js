@@ -18,8 +18,7 @@ var seleniumHelpers = require('webrtc-utilities').seleniumLib;
 test('Candidate Gathering', function(t) {
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/peerconnection/trickle-ice/index.html')
   .then(function() {
     t.pass('page loaded');
@@ -48,8 +47,7 @@ test('Loading server data', {skip: process.env.BROWSER === 'firefox'},
   function(t) {
     var driver = seleniumHelpers.buildDriver();
 
-    driver.get((process.env.BASEURL ? process.env.BASEURL :
-        ('file://' + process.cwd())) +
+    driver.get('file://' + process.cwd() +
         '/src/content/peerconnection/trickle-ice/index.html')
     .then(function() {
       t.pass('page loaded');
@@ -79,8 +77,7 @@ test('Adding a server', {skip: process.env.BROWSER === 'firefox'},
   function(t) {
     var driver = seleniumHelpers.buildDriver();
 
-    driver.get((process.env.BASEURL ? process.env.BASEURL :
-        ('file://' + process.cwd())) +
+    driver.get('file://' + process.cwd() +
         '/src/content/peerconnection/trickle-ice/index.html')
     .then(function() {
       t.pass('page loaded');
@@ -109,8 +106,7 @@ test('Removing a server', {skip: process.env.BROWSER === 'firefox'},
   function(t) {
     var driver = seleniumHelpers.buildDriver();
 
-    driver.get((process.env.BASEURL ? process.env.BASEURL :
-        ('file://' + process.cwd())) +
+    driver.get('file://' + process.cwd() +
         '/src/content/peerconnection/trickle-ice/index.html')
     .then(function() {
       t.pass('page loaded');

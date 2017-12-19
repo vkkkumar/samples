@@ -20,8 +20,7 @@ var emptyFilePath =
 function sendFile(t, path) {
   var driver = seleniumHelpers.buildDriver();
 
-  return driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  return driver.get('file://' + process.cwd() +
     '/src/content/datachannel/filetransfer/index.html')
   .then(function() {
     t.pass('page loaded');

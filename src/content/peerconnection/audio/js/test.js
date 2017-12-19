@@ -24,8 +24,7 @@ test('Audio-only sample codec preference', function(t) {
   var trackId;
   var driver = seleniumHelpers.buildDriver();
 
-  driver.get((process.env.BASEURL ? process.env.BASEURL :
-      ('file://' + process.cwd())) +
+  driver.get('file://' + process.cwd() +
       '/src/content/peerconnection/audio/index.html');
   var codecs = ['opus', 'ISAC', 'G722', 'PCMU'];
 
